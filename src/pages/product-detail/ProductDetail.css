@@ -8,7 +8,6 @@
 
 .product-detail__container {
   max-width: 1200px;
-  width: 100%;
 }
 
 .product-item {
@@ -21,6 +20,7 @@
 
 .product-item__info {
   display: flex;
+  justify-content: space-between;
 }
 
 .product-item__info__image {
@@ -40,4 +40,22 @@
   padding: 1rem 0;
   font-weight: 500;
   width: 700px;
+}
+
+.product-item__info__container {
+  width: 368px;
+}
+
+.product-item__info__container__button {
+  margin-top: 3rem;
+}
+
+.product-item__info__container__button button {
+  border: none;
+  background: #3483fa;
+  color: white;
+  border-radius: 3px;
+  width: 80%;
+  height: 40px;
+  font-size: 1.2rem;
 }

@@ -45,7 +45,9 @@ function ProductDetail() {
                     {productDetail.productDetail.item.price.currency}{" "}
                     {productDetail.productDetail.item.price.amount}
                   </div>
-                  <div></div>
+                  <div className="product-item__info__container__button">
+                    <button>Comprar</button>
+                  </div>
                 </div>
               </div>
               <div class="product-item__description__title">Descripción del producto</div>
