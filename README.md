@@ -5,7 +5,7 @@
 Bienvenidos al proyecto
 
 ## Visualizacion del proyecto: 
-El proyecto puede ser visualizado en: https://mercadolibre-front-kikegstv.vercel.app/
+El proyecto puede ser visualizado en: https://mercadolibre-front-lyart.vercel.app/
 ## Descripción: 
 El proyecto consta de tres partes fundamentales, una barra de navegacion, una seccion de lista de Items y el detalle de cada Item en otra vista.
 
