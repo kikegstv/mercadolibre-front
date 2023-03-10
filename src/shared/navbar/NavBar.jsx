@@ -7,8 +7,6 @@ import "./NavBar.css";
 function NavBar() {
   const { search, setSearch } = useContext(ProductContext);
 
-  
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(search);
@@ -33,14 +31,12 @@ function NavBar() {
             value={search}
             autoFocus
           />
-          
-            <button type="submit">
-              <NavLink to={`/items?q=${search}`}>
+
+          <button type="submit">
+            <NavLink to={`/items?q=${search}`}>
               <div className="search icon"></div>
-              </NavLink>
-            </button>
-          
-          
+            </NavLink>
+          </button>
         </form>
       </nav>
     </header>

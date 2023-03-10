@@ -12,7 +12,7 @@ function ProductList() {
 
   const searchText = queryParams.get("q");
 
-  let { products, dataProductList, search, getProducts } =
+  let { products, getProducts } =
     useContext(ProductContext);
 
   useEffect(() => {
@@ -24,9 +24,9 @@ function ProductList() {
   if (products.length === 0) {
     return <h1>Don´t have products yet</h1>;
   }
-  
+
   return (
-    <div>
+    <>
       <div>
         <main className="product-list">
           <section className="product-list__container">
@@ -36,7 +36,7 @@ function ProductList() {
           </section>
         </main>
       </div>
-    </div>
+    </>
   );
 }
 

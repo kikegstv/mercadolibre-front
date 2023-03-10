@@ -181,3 +181,8 @@ template {
 [hidden] {
   display: none;
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: var(--secondary-gray-color);
+}
