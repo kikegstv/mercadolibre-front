@@ -5,7 +5,11 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
-  const { search, setSearch, getProducts } = useContext(ProductContext);
+  let { search, setSearch, getProducts, products } = useContext(ProductContext);
+
+  useEffect(() => {
+    setSearch("");
+  }, [products]);
 
   const handleSubmit = (e) => {
     getProducts([]);
@@ -47,6 +51,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-/* <li>Home</li>
-        <li>About</li> */

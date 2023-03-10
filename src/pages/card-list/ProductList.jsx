@@ -13,7 +13,7 @@ function ProductList() {
 
   const searchText = queryParams.get("q");
 
-  let { products, getProducts } = useContext(ProductContext);
+  let { products, getProducts, setSearch } = useContext(ProductContext);
 
   useEffect(() => {
     fetch(`https://mercadolibre-api.onrender.com/api/items?q=${searchText}`)
@@ -24,7 +24,7 @@ function ProductList() {
   if (products.length === 0) {
     return <h1>Cargando...</h1>;
   }
-  
+
   return (
     <>
       <div>
