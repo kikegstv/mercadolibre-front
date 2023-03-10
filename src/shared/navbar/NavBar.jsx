@@ -12,7 +12,6 @@ function NavBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(search);
-    console.log(search);
   };
 
   return (

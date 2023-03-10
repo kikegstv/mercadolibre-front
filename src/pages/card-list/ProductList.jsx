@@ -12,7 +12,8 @@ function ProductList() {
 
   const searchText = queryParams.get("q");
 
-  let { products, dataProductList, search, getProducts } = useContext(ProductContext);
+  let { products, dataProductList, search, getProducts } =
+    useContext(ProductContext);
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/items?q=${searchText}`)
@@ -23,8 +24,7 @@ function ProductList() {
   if (products.length === 0) {
     return <h1>Don´t have products yet</h1>;
   }
-  console.log(products);
-  console.log(dataProductList);
+  
   return (
     <div>
       <div>
