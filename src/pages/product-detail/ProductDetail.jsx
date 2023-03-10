@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../../context/ProductContext";
+import Breadcrumb from "../../shared/breadcrumb/Breadcrumb";
 import "./ProductDetail.css";
 
 function ProductDetail() {
@@ -22,7 +23,9 @@ function ProductDetail() {
     <>
       <div>
         <main className="product-detail">
+          
           <section className="product-detail__container">
+          <Breadcrumb items={productDetail.categories}></Breadcrumb>
             <div className="product-item">
               <div className="product-item__info">
                 <img
@@ -30,21 +33,22 @@ function ProductDetail() {
                   src={productDetail.productDetail.item.picture}
                   alt=""
                 />
-                <div>
-                  <div>
+                <div className="product-item__info__container">
+                  <div >
                     {productDetail.productDetail.item.condition === "new"
                       ? "Nuevo"
                       : "Usado"}{" "}
                     | {productDetail.productDetail.item.sold_quantity} vendidos
-                  </div>
-                  <div>{productDetail.productDetail.item.title}</div>
-                  <div>
+                  </div >
+                  <h3 className="product-item__info__container__title">{productDetail.productDetail.item.title}</h3>
+                  <div class="product-item__info__container__price">
                     {productDetail.productDetail.item.price.currency}{" "}
                     {productDetail.productDetail.item.price.amount}
                   </div>
                   <div></div>
                 </div>
               </div>
+              <div class="product-item__description__title">Descripción del producto</div>
               <p>{productDetail.productDetail.item.description}</p>
             </div>
           </section>

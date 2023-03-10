@@ -7,8 +7,8 @@ function Breadcrumb({ items }) {
     <>
       <section className="breadcrumb">
         {items.map((item, key) => (
-          <div className="breadcrumb__container">
-            <p key={key}>{item}</p> {key < (items.length - 1) && (<img className="breadcrumb__container__image" src={arrow} alt="breadcrumb icon"></img>)}
+          <div key={key} className="breadcrumb__container">
+            <p>{item}</p> {key < (items.length - 1) && (<img className="breadcrumb__container__image" src={arrow} alt="breadcrumb icon"></img>)}
           </div>
         ))}
       </section>

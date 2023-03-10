@@ -26,3 +26,18 @@
 .product-item__info__image {
   width: 700px;
 }
+
+.product-item__info__container__title {
+  font-weight: bold;
+}
+
+.product-item__info__container__price {
+  font-size: 45px;
+}
+
+.product-item__description__title {
+  font-size: 36px;
+  padding: 1rem 0;
+  font-weight: 500;
+  width: 700px;
+}
