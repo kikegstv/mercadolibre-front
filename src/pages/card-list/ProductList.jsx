@@ -12,8 +12,7 @@ function ProductList() {
 
   const searchText = queryParams.get("q");
 
-  let { products, getProducts } =
-    useContext(ProductContext);
+  let { products, getProducts } = useContext(ProductContext);
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/items?q=${searchText}`)
@@ -22,7 +21,7 @@ function ProductList() {
   }, [searchText]);
 
   if (products.length === 0) {
-    return <h1>Don´t have products yet</h1>;
+    return <h1>Cargando...</h1>;
   }
 
   return (

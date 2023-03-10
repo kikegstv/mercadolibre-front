@@ -15,7 +15,7 @@ function ProductDetail() {
   }, [params.id]);
   console.log(productDetail);
   if (!productDetail) {
-    return <h1>Don´t have products yet</h1>;
+    return <h1>Cargando...</h1>;
   }
 
   return (
