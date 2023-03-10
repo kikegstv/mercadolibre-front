@@ -6,7 +6,7 @@ import "./ProductDetail.css";
 
 function ProductDetail() {
   const params = useParams();
-  
+
   let { productDetail, setDataProductDetail } = useContext(ProductContext);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ function ProductDetail() {
                   <h3 className="product-item__info__container__title">
                     {productDetail.productDetail.item.title}
                   </h3>
-                  <div class="product-item__info__container__price">
+                  <div className="product-item__info__container__price">
                     {productDetail.productDetail.item.price.currency}{" "}
                     {productDetail.productDetail.item.price.amount}
                   </div>
@@ -51,7 +51,7 @@ function ProductDetail() {
                   </div>
                 </div>
               </div>
-              <div class="product-item__description__title">
+              <div className="product-item__description__title">
                 Descripción del producto
               </div>
               <p>{productDetail.productDetail.item.description}</p>
