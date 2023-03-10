@@ -1,0 +1,35 @@
+.product-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: var(--primary-gray-color);
+}
+
+.product-list__container {
+    max-width: 1200px;
+    width: 100%;
+    
+}
+
+.product-card {
+    display: flex;
+    background: white;
+    margin: 0.1rem;
+    height: 160px;
+}
+
+.product-card__image {
+    padding: 0 24px;
+    width: 160px;
+    height: 100%;
+}
+
+.product-card__image > img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-card__info {
+    /* margin-left: 0.4rem; */
+}
