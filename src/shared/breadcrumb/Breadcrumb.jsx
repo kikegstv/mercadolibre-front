@@ -2,7 +2,6 @@ import "./Breadcrumb.css";
 import arrow from "./../../assets/icons/arrow.svg";
 
 function Breadcrumb({ items }) {
-  console.log(items);
   return (
     <>
       <section className="breadcrumb">

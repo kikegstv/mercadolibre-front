@@ -5,9 +5,10 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
-  const { search, setSearch } = useContext(ProductContext);
+  const { search, setSearch, getProducts } = useContext(ProductContext);
 
   const handleSubmit = (e) => {
+    getProducts([]);
     e.preventDefault();
     setSearch(search);
   };
@@ -16,11 +17,13 @@ function NavBar() {
     <header className="navbar">
       <nav className="navbar__container">
         <ul className="navbar__container__list">
-          <img
-            src={logo}
-            alt="Descripción de la imagen"
-            title="Título de la imagen"
-          />
+          <NavLink to={`/`}>
+            <img
+              src={logo}
+              alt="Descripción de la imagen"
+              title="Título de la imagen"
+            />
+          </NavLink>
         </ul>
 
         <form onSubmit={handleSubmit} className="navbar__container__search">

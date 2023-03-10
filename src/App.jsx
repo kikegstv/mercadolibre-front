@@ -11,10 +11,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/items" element={<ProductList/>}/>
       <Route path="/items/:id" element={<ProductDetail/>}/>
-      {/* <Route path="/dashboard/*" element={<ProductDetail/>}>
-        <Route path="welcome" element={<ProductDetail/>}/>
-      </Route> */}
-      <Route path="*" element={<h1>Here not found component</h1>}/>
+      <Route path="*" element={<h1>Not Found</h1>}/>
     </Routes>
   </BrowserRouter>
 }

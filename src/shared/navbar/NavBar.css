@@ -20,8 +20,8 @@
   padding: 0;
 }
 
-.navbar__container__list > img {
-  height: 34px;
+.navbar__container__list > a {
+  width: 50px;
 }
 
 .navbar__container__search {

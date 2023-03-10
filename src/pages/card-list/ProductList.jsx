@@ -24,7 +24,7 @@ function ProductList() {
   if (products.length === 0) {
     return <h1>Cargando...</h1>;
   }
-  console.log(products);
+  
   return (
     <>
       <div>

@@ -6,7 +6,7 @@ import "./ProductDetail.css";
 
 function ProductDetail() {
   const params = useParams();
-  console.log(params);
+  
   let { productDetail, setDataProductDetail } = useContext(ProductContext);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function ProductDetail() {
       .then((response) => response.json())
       .then((data) => setDataProductDetail(data.body));
   }, [params.id]);
-  console.log(productDetail);
+
   if (!productDetail) {
     return <h1>Cargando...</h1>;
   }
@@ -23,9 +23,8 @@ function ProductDetail() {
     <>
       <div>
         <main className="product-detail">
-          
           <section className="product-detail__container">
-          <Breadcrumb items={productDetail.categories}></Breadcrumb>
+            <Breadcrumb items={productDetail.categories}></Breadcrumb>
             <div className="product-item">
               <div className="product-item__info">
                 <img
@@ -34,13 +33,15 @@ function ProductDetail() {
                   alt=""
                 />
                 <div className="product-item__info__container">
-                  <div >
+                  <div>
                     {productDetail.productDetail.item.condition === "new"
                       ? "Nuevo"
                       : "Usado"}{" "}
                     | {productDetail.productDetail.item.sold_quantity} vendidos
-                  </div >
-                  <h3 className="product-item__info__container__title">{productDetail.productDetail.item.title}</h3>
+                  </div>
+                  <h3 className="product-item__info__container__title">
+                    {productDetail.productDetail.item.title}
+                  </h3>
                   <div class="product-item__info__container__price">
                     {productDetail.productDetail.item.price.currency}{" "}
                     {productDetail.productDetail.item.price.amount}
@@ -50,7 +51,9 @@ function ProductDetail() {
                   </div>
                 </div>
               </div>
-              <div class="product-item__description__title">Descripción del producto</div>
+              <div class="product-item__description__title">
+                Descripción del producto
+              </div>
               <p>{productDetail.productDetail.item.description}</p>
             </div>
           </section>
