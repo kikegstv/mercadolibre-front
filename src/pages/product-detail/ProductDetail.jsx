@@ -9,7 +9,7 @@ function ProductDetail() {
   let { productDetail, setDataProductDetail } = useContext(ProductContext);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/items/${params.id}`)
+    fetch(`https://mercadolibre-api.onrender.com/api/items/${params.id}`)
       .then((response) => response.json())
       .then((data) => setDataProductDetail(data.body));
   }, [params.id]);

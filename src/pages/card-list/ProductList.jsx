@@ -15,7 +15,7 @@ function ProductList() {
   let { products, getProducts } = useContext(ProductContext);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/items?q=${searchText}`)
+    fetch(`https://mercadolibre-api.onrender.com/api/items?q=${searchText}`)
       .then((response) => response.json())
       .then((data) => getProducts(data.body.items));
   }, [searchText]);
