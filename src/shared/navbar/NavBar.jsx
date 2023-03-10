@@ -39,7 +39,7 @@ function NavBar() {
             autoFocus
           />
 
-          <button type="submit">
+          <button className={search === '' ? 'no-click' : ''} type="submit">
             <NavLink to={`/items?q=${search}`}>
               <div className="search icon"></div>
             </NavLink>
