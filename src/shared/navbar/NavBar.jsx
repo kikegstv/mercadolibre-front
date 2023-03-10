@@ -27,7 +27,7 @@ function NavBar() {
           <input
             type="text"
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search..."
+            placeholder="Nunca dejes de buscar..."
             value={search}
             autoFocus
           />
