@@ -1,0 +1,13 @@
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb__container {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb__container__image {
+    height: 10px;
+    padding: 0 5px;
+}

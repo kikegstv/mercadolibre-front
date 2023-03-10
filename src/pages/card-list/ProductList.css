@@ -1,7 +1,8 @@
 .product-list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding-top: 2rem;
   width: 100%;
   background-color: var(--primary-gray-color);
   min-height: 88vh;
